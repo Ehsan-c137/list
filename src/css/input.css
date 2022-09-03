@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.css-table {
+   margin: 0 0 40px 0;
+   width: 100%;
+   display: table;
+}
+
+.row {
+   display: table-row;
+   background-color: white;
+}
+.row:nth-of-type(odd) {
+   background-color: #f6f6f6;
+}
+.row.header {
+   font-weight: 700;
+   color: #969696;
+   background: #f8f9fd;
+}
+
+.cell {
+   padding: 6px 12px;
+   display: table-cell;
+   color: #20486a;
+}
+
+@media screen and (max-width: 580px) {
+   .css-table {
+      display: block;
+   }
+   .row {
+      padding: 14px 0px;
+      display: block;
+   }
+   .row.header {
+      padding: 0px;
+      height: 6px;
+      display: none;
+   }
+
+   .cell {
+      margin-bottom: 10px;
+   }
+   .cell::before {
+      margin-bottom: 3px;
+      content: attr(data-title);
+      min-width: 98px;
+      font-size: 10px;
+      line-height: 10px;
+      font-size: bold;
+      text-transform: uppercase;
+      color: #969696;
+      display: block;
+   }
+}
+@media screen and (max-width: 580px) {
+   .cell {
+      padding: 2px 16px;
+      display: block;
+   }
+}
+
+/* scroll bar */
+/* width */
+::-webkit-scrollbar {
+   width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #888;
+   border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: #555;
+}

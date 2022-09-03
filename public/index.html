@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      />
+      <link rel="stylesheet" href="./output.css" />
+      <script defer src="/src/js/app.js"></script>
+      <title>Document</title>
+   </head>
+   <body>
+      <div
+         class="bg-[#F8F9FD] p-6 gap-12 flex flex-col md:flex md:flex-row h-[100vh] md:overflow-hidden"
+      >
+         <!-- add item form container -->
+         <div class="flex flex-col gap-6 md:w-1/4 p-4 h-full w-full">
+            <!-- header -->
+            <div class="flex flex-col gap-1">
+               <h2 class="text-primeryBlue text-xl font-semibold">
+                  Add new Item
+               </h2>
+               <p class="text-sm text-gray-400">
+                  Lorem ipsum dolor, sit amet consectetur.
+               </p>
+            </div>
+            <!-- form -->
+            <form class="flex flex-col">
+               <label class="mb-1 font-semibold" for="company-name"
+                  >Company name:</label
+               >
+               <input
+                  class="mb-4 bg-white border-2 border-gray-200 rounded-md py-1 px-3 focus-within:border-primeryBlue transition-all duration-400"
+                  type="text"
+                  placeholder="e.g Netflix, Inc"
+                  name="company-name"
+               />
+
+               <!-- 2 -->
+               <label class="mb-1 font-semibold" for="company-state"
+                  >Company state:</label
+               >
+               <input
+                  class="mb-4 bg-white border-2 border-gray-200 rounded-md py-1 px-3"
+                  type="text"
+                  placeholder="e.g Florida"
+                  name="company-state"
+               />
+               <!-- 3 -->
+               <label class="mb-1 font-semibold" for="company-name"
+                  >Company employees:</label
+               >
+               <input
+                  class="mb-9 bg-white border-2 border-gray-200 rounded-md py-1 px-3"
+                  type="text"
+                  placeholder="e.g 20.345"
+                  name="company-name"
+               />
+
+               <button
+                  id="add-item-btn"
+                  class="hover:bg-slate-500 active:bg-primeryBlue py-2 mx-4 rounded-md bg-primeryBlue text-white tranistion-all duration-300"
+                  type="submit"
+               >
+                  Add Item
+               </button>
+            </form>
+         </div>
+         <!-- company directory -->
+         <div
+            class="flex flex-col bg-white rounded-t-md w-full md:w-3/4 md:overflow-y-auto"
+         >
+            <!-- company header -->
+            <div class="flex flex-col gap-1 p-4">
+               <h2 class="text-primeryBlue font-semibold text-xl">
+                  Company Directory
+               </h2>
+               <p class="text-sm text-gray-400">
+                  Lorem, ipsum dolor sit amet consectetur.
+               </p>
+            </div>
+            <!-- data -->
+            <div class="css-table">
+               <div class="row header">
+                  <p class="cell">NAME</p>
+                  <p class="cell">STATE</p>
+                  <p class="cell">EMPLOYEES</p>
+                  <p class="cell opacity-0"></p>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Apple Inc.</p>
+                  <p class="cell" data-title="STATE">
+                     Cupertino, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">36,786</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+               <div class="row">
+                  <p class="cell" data-title="NAME">Google LLC</p>
+                  <p class="cell" data-title="STATE">
+                     Mountain View, California, United States
+                  </p>
+                  <p class="cell" data-title="EMPLOYEES">139,995</p>
+                  <div
+                     class="flex flex-row-reverse gap-4 justify-between md:justify-start md:flex-row px-4"
+                  >
+                     <i
+                        class="fa-solid fa-pen-to-square cursor-pointer edit-btn hover:text-green-600 transition-colors"
+                     ></i>
+                     <i
+                        class="fa-solid fa-trash cursor-pointer del-btn hover:text-red-500 transition-colors"
+                     ></i>
+                  </div>
+               </div>
+            </div>
+            <!-- end of data ^ -->
+         </div>
+      </div>
+   </body>
+</html>
